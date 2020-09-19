@@ -2,6 +2,7 @@
   "name": "@dword-design/tester",
   "version": "1.0.0",
   "description": "",
+  "repository": "dword-design/tester",
   "license": "MIT",
   "author": "Sebastian Landwehr <info@dword-design.de>",
   "main": "dist/index.js",

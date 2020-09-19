@@ -5,9 +5,9 @@
 <!-- BADGES/ -->
 [![NPM version](https://img.shields.io/npm/v/@dword-design/tester.svg)](https://npmjs.org/package/@dword-design/tester)
 ![Linux macOS Windows compatible](https://img.shields.io/badge/os-linux%20%7C%C2%A0macos%20%7C%C2%A0windows-blue)
-[![Build status](https://github.com/undefined/workflows/build/badge.svg)](https://github.com/undefined/actions)
-[![Coverage status](https://img.shields.io/coveralls/undefined)](https://coveralls.io/github/undefined)
-[![Dependency status](https://img.shields.io/david/undefined)](https://david-dm.org/undefined)
+[![Build status](https://github.com/dword-design/tester/workflows/build/badge.svg)](https://github.com/dword-design/tester/actions)
+[![Coverage status](https://img.shields.io/coveralls/dword-design/tester)](https://coveralls.io/github/dword-design/tester)
+[![Dependency status](https://img.shields.io/david/dword-design/tester)](https://david-dm.org/dword-design/tester)
 ![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen)
 
 <a href="https://gitpod.io/#https://github.com/dword-design/bar">
