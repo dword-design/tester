@@ -20,13 +20,13 @@
   },
   "dependencies": {
     "@dword-design/functions": "^1.1.4",
-    "nock": "^13.0.4",
-    "nodemailer-mock": "^1.5.3",
     "promise-sequential": "^1.1.1"
   },
   "devDependencies": {
     "@dword-design/base": "^6.27.0",
-    "firebase-admin": "^9.2.0"
+    "firebase-admin": "^9.2.0",
+    "nock": "^13.0.4",
+    "nodemailer-mock": "^1.5.3"
   },
   "peerDependencies": {
     "firebase-admin": "^9.2.0",
