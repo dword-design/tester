@@ -1,3 +1,11 @@
+## [1.0.2](https://github.com/dword-design/tester/compare/v1.0.1...v1.0.2) (2020-10-22)
+
+
+### Bug Fixes
+
+* fix lint ([76d97b0](https://github.com/dword-design/tester/commit/76d97b0470a85550b21e7b34731fa1df30b1f807))
+* fix peer dependencies ([efa91a0](https://github.com/dword-design/tester/commit/efa91a0a64a19c8ad2bbb4a32661b285bcc3fa1a))
+
 ## [1.0.1](https://github.com/dword-design/tester/compare/v1.0.0...v1.0.1) (2020-09-19)
 
 
