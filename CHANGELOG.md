@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/dword-design/tester/compare/v1.0.2...v1.0.3) (2021-02-16)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/base to v7 ([#7](https://github.com/dword-design/tester/issues/7)) ([0ae323c](https://github.com/dword-design/tester/commit/0ae323c28480f857e2feb6e20ada88163f7efb2b))
+
 ## [1.0.2](https://github.com/dword-design/tester/compare/v1.0.1...v1.0.2) (2020-10-22)
 
 
