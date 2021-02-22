@@ -13,8 +13,15 @@ export default (tests, plugins) => {
     ...zipObject(
       hooks,
       hooks
-        |> map(hook => () =>
-          plugins |> map(plugin => () => plugin[hook]?.()) |> sequential
+        |> map(
+          hook =>
+            function () {
+              return (
+                plugins
+                |> map(plugin => () => plugin[hook]?.call(this))
+                |> sequential
+              )
+            }
         )
     ),
     ...tests,
