@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/dword-design/tester/compare/v1.0.3...v1.1.0) (2021-02-22)
+
+
+### Features
+
+* pass variables via this and add tests ([f33b84f](https://github.com/dword-design/tester/commit/f33b84fdd0dc45d7f894fd7a71790b18b0a28fd9))
+
 ## [1.0.3](https://github.com/dword-design/tester/compare/v1.0.2...v1.0.3) (2021-02-16)
 
 
