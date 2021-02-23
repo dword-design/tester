@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/dword-design/tester/compare/v1.1.0...v1.1.1) (2021-02-23)
+
+
+### Bug Fixes
+
+* run after hooks in reverse order ([ebbcc99](https://github.com/dword-design/tester/commit/ebbcc99433099eb4f18ce9851191867e4e446054))
+
 # [1.1.0](https://github.com/dword-design/tester/compare/v1.0.3...v1.1.0) (2021-02-22)
 
 
