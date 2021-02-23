@@ -167,4 +167,41 @@ export default {
       export default self({ works: () => {} })
     `,
   },
+  'multiple plugins': {
+    outputMatcher: new RegExp(endent`
+      ^
+
+        index
+      before1
+      before2
+          . test
+      after2
+      after1
+      
+      
+        1 passing \\(\\d+ms\\)
+      $
+    `),
+    tests: endent`
+      import self from '../src'
+
+      let counter = 1
+
+      export default self(
+        {
+          test: () => {}
+        },
+        [
+          {
+            before: () => console.log('before1'),
+            after: () => console.log('after1'),
+          },
+          {
+            before: () => console.log('before2'),
+            after: () => console.log('after2'),
+          }
+        ]
+      )
+    `,
+  },
 } |> mapValues(runTest)

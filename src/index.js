@@ -1,7 +1,5 @@
-import { map, zipObject } from '@dword-design/functions'
+import { map, reverse } from '@dword-design/functions'
 import sequential from 'promise-sequential'
-
-const hooks = ['beforeEach', 'afterEach', 'before', 'after']
 
 export default (tests, plugins) => {
   plugins =
@@ -10,20 +8,34 @@ export default (tests, plugins) => {
       typeof plugin === 'string' ? require(`./${plugin}`) : plugin
     )
   return {
-    ...zipObject(
-      hooks,
-      hooks
-        |> map(
-          hook =>
-            function () {
-              return (
-                plugins
-                |> map(plugin => () => plugin[hook]?.call(this))
-                |> sequential
-              )
-            }
-        )
-    ),
+    after() {
+      return (
+        plugins
+        |> reverse
+        |> map(plugin => () => plugin.after?.call(this))
+        |> sequential
+      )
+    },
+    afterEach() {
+      return (
+        plugins
+        |> reverse
+        |> map(plugin => () => plugin.afterEach?.call(this))
+        |> sequential
+      )
+    },
+    before() {
+      return (
+        plugins |> map(plugin => () => plugin.before?.call(this)) |> sequential
+      )
+    },
+    beforeEach() {
+      return (
+        plugins
+        |> map(plugin => () => plugin.beforeEach?.call(this))
+        |> sequential
+      )
+    },
     ...tests,
   }
 }
