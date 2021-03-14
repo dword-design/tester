@@ -3,33 +3,22 @@ import packageName from 'depcheck-package-name'
 import execa from 'execa'
 import { outputFile } from 'fs-extra'
 import withLocalTmpDir from 'with-local-tmp-dir'
+import unifyMochaOutput from './unify-mocha-output'
 
-const runTest = config => () =>
-  withLocalTmpDir(async () => {
-    await outputFile('index.spec.js', config.tests)
-    const output = await execa.command(
-      `mocha --ui ${packageName`mocha-ui-exports-auto-describe`} index.spec.js`,
-      { all: true }
-    )
-    if (config.outputMatcher) {
-      expect(output.all).toMatch(config.outputMatcher)
-    }
-  })
+const runTest = config =>
+  function () {
+    return withLocalTmpDir(async () => {
+      await outputFile('index.spec.js', config.tests)
+      const output = await execa.command(
+        `mocha --ui ${packageName`mocha-ui-exports-auto-describe`} index.spec.js`,
+        { all: true }
+      )
+      expect(output.all |> unifyMochaOutput).toMatchSnapshot(this)
+    })
+  }
 
 export default {
   'after hook': {
-    outputMatcher: new RegExp(endent`
-      ^
-
-        index
-          . test1
-          . test2
-      after
-      
-      
-        2 passing \\(\\d+ms\\)
-      $
-    `),
     tests: endent`
       import self from '../src'
 
@@ -45,19 +34,6 @@ export default {
     `,
   },
   'afterEach hook': {
-    outputMatcher: new RegExp(endent`
-      ^
-
-        index
-          . test1
-      afterEach
-          . test2
-      afterEach
-      
-      
-        2 passing \\(\\d+ms\\)
-      $
-    `),
     tests: endent`
       import self from '../src'
 
@@ -73,20 +49,6 @@ export default {
     `,
   },
   'before hook': {
-    outputMatcher: new RegExp(endent`
-      ^
-
-        index
-      before
-      foobar
-          . test1
-      foobar
-          . test2
-      
-      
-        2 passing \\(\\d+ms\\)
-      $
-    `),
     tests: endent`
       import self from '../src'
 
@@ -111,21 +73,6 @@ export default {
     `,
   },
   'beforeEach hook': {
-    outputMatcher: new RegExp(endent`
-      ^
-
-        index
-      beforeEach
-      foobar1
-          . test1
-      beforeEach
-      foobar2
-          . test2
-      
-      
-        2 passing \\(\\d+ms\\)
-      $
-    `),
     tests: endent`
       import self from '../src'
 
@@ -151,16 +98,6 @@ export default {
     `,
   },
   empty: {
-    outputMatcher: new RegExp(endent`
-      ^
-
-        index
-          . works
-      
-      
-        1 passing \\(\\d+ms\\)
-      $
-    `),
     tests: endent`
       import self from '../src'
 
@@ -168,20 +105,6 @@ export default {
     `,
   },
   'multiple plugins': {
-    outputMatcher: new RegExp(endent`
-      ^
-
-        index
-      before1
-      before2
-          . test
-      after2
-      after1
-      
-      
-        1 passing \\(\\d+ms\\)
-      $
-    `),
     tests: endent`
       import self from '../src'
 
@@ -201,6 +124,26 @@ export default {
             after: () => console.log('after2'),
           }
         ]
+      )
+    `,
+  },
+  transform: {
+    tests: endent`
+      import self from '../src'
+
+      export default self(
+        {
+          test1: {
+            a: { b: () => {} },
+          },
+          test2: {
+            a: { b: () => {} },
+          },
+        },
+        [
+          { transform: test => test.a },
+          { transform: test => test.b },
+        ],
       )
     `,
   },

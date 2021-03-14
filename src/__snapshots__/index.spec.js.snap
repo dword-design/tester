@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index after hook 1`] = `
+"
+
+  index
+    ✓ test1
+    ✓ test2
+after
+
+
+  2 passing
+"
+`;
+
+exports[`index afterEach hook 1`] = `
+"
+
+  index
+    ✓ test1
+afterEach
+    ✓ test2
+afterEach
+
+
+  2 passing
+"
+`;
+
+exports[`index before hook 1`] = `
+"
+
+  index
+before
+foobar
+    ✓ test1
+foobar
+    ✓ test2
+
+
+  2 passing
+"
+`;
+
+exports[`index beforeEach hook 1`] = `
+"
+
+  index
+beforeEach
+foobar1
+    ✓ test1
+beforeEach
+foobar2
+    ✓ test2
+
+
+  2 passing
+"
+`;
+
+exports[`index empty 1`] = `
+"
+
+  index
+    ✓ works
+
+
+  1 passing
+"
+`;
+
+exports[`index multiple plugins 1`] = `
+"
+
+  index
+before1
+before2
+    ✓ test
+after2
+after1
+
+
+  1 passing
+"
+`;
+
+exports[`index transform 1`] = `
+"
+
+  index
+    ✓ test1
+    ✓ test2
+
+
+  2 passing
+"
+`;
