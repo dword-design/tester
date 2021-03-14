@@ -1,8 +1,11 @@
 import { endent } from '@dword-design/functions'
+
 import self from './unify-mocha-output'
 
 export default [
-  () => expect(self(endent`
+  () =>
+    expect(
+      self(endent`
   
     index
       ✓ test1
@@ -11,7 +14,8 @@ export default [
   
     2 passing (7ms)
     
-  `)).toEqual(endent`
+  `)
+    ).toEqual(endent`
   
     index
       ✓ test1
@@ -21,7 +25,9 @@ export default [
     2 passing
     
   `),
-  () => expect(self(endent`
+  () =>
+    expect(
+      self(endent`
   
     index
       √ test1
@@ -30,7 +36,8 @@ export default [
   
     2 passing (7ms)
     
-  `)).toEqual(endent`
+  `)
+    ).toEqual(endent`
   
     index
       ✓ test1
@@ -39,5 +46,5 @@ export default [
 
     2 passing
     
-  `)
+  `),
 ]

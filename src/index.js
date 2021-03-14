@@ -1,4 +1,10 @@
-import { map, mapValues, reduce, reverse, identity } from '@dword-design/functions'
+import {
+  identity,
+  map,
+  mapValues,
+  reduce,
+  reverse,
+} from '@dword-design/functions'
 import sequential from 'promise-sequential'
 
 export default (tests, plugins) => {

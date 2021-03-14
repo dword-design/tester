@@ -3,6 +3,7 @@ import packageName from 'depcheck-package-name'
 import execa from 'execa'
 import { outputFile } from 'fs-extra'
 import withLocalTmpDir from 'with-local-tmp-dir'
+
 import unifyMochaOutput from './unify-mocha-output'
 
 const runTest = config =>
