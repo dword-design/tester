@@ -2,8 +2,8 @@ import { endent, mapValues } from '@dword-design/functions'
 import packageName from 'depcheck-package-name'
 import execa from 'execa'
 import { outputFile } from 'fs-extra'
+import unifyMochaOutput from 'unify-mocha-output'
 import withLocalTmpDir from 'with-local-tmp-dir'
-import unifyMochaOutput from './unify-mocha-output'
 
 const runTest = config =>
   function () {
