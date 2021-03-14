@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/dword-design/tester/compare/v1.1.2...v1.2.0) (2021-03-14)
+
+
+### Features
+
+* add transform ([#12](https://github.com/dword-design/tester/issues/12)) ([5e811b6](https://github.com/dword-design/tester/commit/5e811b62ceba64d9a0c429ca3802234479c20caf))
+
 ## [1.1.2](https://github.com/dword-design/tester/compare/v1.1.1...v1.1.2) (2021-03-09)
 
 
