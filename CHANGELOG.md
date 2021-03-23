@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/dword-design/tester/compare/v1.2.2...v1.2.3) (2021-03-23)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v3 ([#15](https://github.com/dword-design/tester/issues/15)) ([0fb11b4](https://github.com/dword-design/tester/commit/0fb11b487f425209caf051e8fa0e9ef2798709a2))
+
 ## [1.2.2](https://github.com/dword-design/tester/compare/v1.2.1...v1.2.2) (2021-03-22)
 
 
