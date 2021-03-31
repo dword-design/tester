@@ -21,6 +21,7 @@ export default (tests, plugins) => {
       transform: identity,
       ...plugin,
     }))
+
   return {
     after() {
       return (
