@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/dword-design/tester/compare/v1.2.3...v1.2.4) (2021-03-31)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#16](https://github.com/dword-design/tester/issues/16)) ([e1c3173](https://github.com/dword-design/tester/commit/e1c31737ec2313ce411e5b9a297d337a6e2782ae))
+
 ## [1.2.3](https://github.com/dword-design/tester/compare/v1.2.2...v1.2.3) (2021-03-23)
 
 
