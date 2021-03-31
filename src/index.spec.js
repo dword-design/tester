@@ -9,6 +9,7 @@ const runTest = config =>
   function () {
     return withLocalTmpDir(async () => {
       await outputFile('index.spec.js', config.tests)
+
       const output = await execa.command(
         `mocha --ui ${packageName`mocha-ui-exports-auto-describe`} index.spec.js`,
         { all: true }
