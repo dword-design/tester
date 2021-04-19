@@ -32,7 +32,7 @@
     "mocha-ui-exports-auto-describe": "^1.0.8",
     "nock": "^13.0.4",
     "nodemailer-mock": "^1.5.3",
-    "unify-mocha-output": "^1.0.0",
+    "unify-mocha-output": "^1.0.6",
     "with-local-tmp-dir": "^2.2.15"
   },
   "peerDependencies": {
