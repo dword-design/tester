@@ -29,7 +29,7 @@
     "execa": "^5.0.0",
     "firebase-admin": "^9.2.0",
     "fs-extra": "^9.1.0",
-    "mocha-ui-exports-auto-describe": "^1.0.8",
+    "mocha-ui-exports-auto-describe": "^1.0.14",
     "nock": "^13.0.4",
     "nodemailer-mock": "^1.5.3",
     "unify-mocha-output": "^1.0.0",
