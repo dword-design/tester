@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@dword-design/base": "^7.0.0",
-    "depcheck-package-name": "^1.0.1",
+    "depcheck-package-name": "^1.0.5",
     "execa": "^5.0.0",
     "firebase-admin": "^9.2.0",
     "fs-extra": "^9.1.0",
