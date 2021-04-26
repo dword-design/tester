@@ -1,3 +1,10 @@
+## [1.2.8](https://github.com/dword-design/tester/compare/v1.2.7...v1.2.8) (2021-04-26)
+
+
+### Bug Fixes
+
+* update dependency with-local-tmp-dir to v3 ([#26](https://github.com/dword-design/tester/issues/26)) ([f688b41](https://github.com/dword-design/tester/commit/f688b4155c95624d70020e678c074c51d38abe15))
+
 ## [1.2.7](https://github.com/dword-design/tester/compare/v1.2.6...v1.2.7) (2021-04-22)
 
 
