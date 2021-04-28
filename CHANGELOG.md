@@ -1,3 +1,10 @@
+## [1.2.9](https://github.com/dword-design/tester/compare/v1.2.8...v1.2.9) (2021-04-28)
+
+
+### Bug Fixes
+
+* updated package.json[description] ([#29](https://github.com/dword-design/tester/issues/29)) ([6150f1e](https://github.com/dword-design/tester/commit/6150f1e716cdc4d9a168e1d49c52a29a059d5fc8))
+
 ## [1.2.8](https://github.com/dword-design/tester/compare/v1.2.7...v1.2.8) (2021-04-26)
 
 
