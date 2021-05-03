@@ -39,6 +39,9 @@
     "nock": "^13.0.4",
     "nodemailer-mock": "^1.5.3"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "publishConfig": {
     "access": "public"
   }
