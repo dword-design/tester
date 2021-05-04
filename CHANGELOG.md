@@ -1,3 +1,11 @@
+## [2.0.1](https://github.com/dword-design/tester/compare/v2.0.0...v2.0.1) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency fs-extra to v10 ([#37](https://github.com/dword-design/tester/issues/37)) ([6ba3954](https://github.com/dword-design/tester/commit/6ba39540cb7fc62965d1af180fc0ccf49a28c81e))
+* update dependency with-local-tmp-dir to v4 ([#38](https://github.com/dword-design/tester/issues/38)) ([ec12121](https://github.com/dword-design/tester/commit/ec121219d8fee59d89a70528df3ee963e7bbedb3))
+
 # [2.0.0](https://github.com/dword-design/tester/compare/v1.2.9...v2.0.0) (2021-05-03)
 
 
