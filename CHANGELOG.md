@@ -1,3 +1,11 @@
+## [2.0.3](https://github.com/dword-design/tester/compare/v2.0.2...v2.0.3) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency mocha-ui-exports-auto-describe to v2 ([#35](https://github.com/dword-design/tester/issues/35)) ([8e9d629](https://github.com/dword-design/tester/commit/8e9d629e645f8e1162048d5d7c8050348407a074))
+* update dependency unify-mocha-output to v2 ([#36](https://github.com/dword-design/tester/issues/36)) ([3bdfbe8](https://github.com/dword-design/tester/commit/3bdfbe897257be685b9b68019fcd3c2e99a9c679))
+
 ## [2.0.2](https://github.com/dword-design/tester/compare/v2.0.1...v2.0.2) (2021-05-04)
 
 
