@@ -1,3 +1,11 @@
+## [2.0.2](https://github.com/dword-design/tester/compare/v2.0.1...v2.0.2) (2021-05-04)
+
+
+### Bug Fixes
+
+* update dependency @dword-design/functions to v4 ([#33](https://github.com/dword-design/tester/issues/33)) ([dcc5fa8](https://github.com/dword-design/tester/commit/dcc5fa885bbff942dfde92b7ea1532667cc0ab00))
+* update dependency depcheck-package-name to v2 ([#34](https://github.com/dword-design/tester/issues/34)) ([68afc51](https://github.com/dword-design/tester/commit/68afc516bb3e154e61e9d32e8e5829f65f7f19e1))
+
 ## [2.0.1](https://github.com/dword-design/tester/compare/v2.0.0...v2.0.1) (2021-05-04)
 
 
