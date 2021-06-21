@@ -1,3 +1,10 @@
+## [2.0.6](https://github.com/dword-design/tester/compare/v2.0.5...v2.0.6) (2021-06-21)
+
+
+### Bug Fixes
+
+* remove outsourced plugins ([3aa14e6](https://github.com/dword-design/tester/commit/3aa14e6afc5af0ae2627997a89efda126c2746e5))
+
 ## [2.0.5](https://github.com/dword-design/tester/compare/v2.0.4...v2.0.5) (2021-06-14)
 
 
