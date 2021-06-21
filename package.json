@@ -26,19 +26,12 @@
     "@dword-design/base": "^8.0.0",
     "depcheck-package-name": "^2.0.0",
     "execa": "^5.0.0",
-    "firebase-admin": "^9.2.0",
     "fs-extra": "^10.0.0",
     "mocha-ui-exports-auto-describe": "^2.0.0",
-    "nock": "^13.0.4",
-    "nodemailer-mock": "^1.5.3",
     "unify-mocha-output": "^2.0.0",
     "with-local-tmp-dir": "^4.0.0"
   },
-  "peerDependencies": {
-    "firebase-admin": "^9.2.0",
-    "nock": "^13.0.4",
-    "nodemailer-mock": "^1.5.3"
-  },
+  "peerDependencies": {},
   "engines": {
     "node": ">=12"
   },
