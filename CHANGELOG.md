@@ -1,3 +1,10 @@
+## [2.0.7](https://github.com/dword-design/tester/compare/v2.0.6...v2.0.7) (2021-07-06)
+
+
+### Bug Fixes
+
+* update config files ([c389d87](https://github.com/dword-design/tester/commit/c389d874971d54a90896a55b62176379b0462d7d))
+
 ## [2.0.6](https://github.com/dword-design/tester/compare/v2.0.5...v2.0.6) (2021-06-21)
 
 
