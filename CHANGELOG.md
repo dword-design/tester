@@ -1,3 +1,10 @@
+## [2.0.9](https://github.com/dword-design/tester/compare/v2.0.8...v2.0.9) (2021-08-19)
+
+
+### Bug Fixes
+
+* pass name to transform ([80ea14b](https://github.com/dword-design/tester/commit/80ea14bf24cf391d23ac4a2236b1bf3806d1b0d6))
+
 ## [2.0.8](https://github.com/dword-design/tester/compare/v2.0.7...v2.0.8) (2021-07-20)
 
 
