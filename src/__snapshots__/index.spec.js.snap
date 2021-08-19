@@ -95,3 +95,15 @@ exports[`index transform 1`] = `
   2 passing
 "
 `;
+
+exports[`index transform with name 1`] = `
+"
+
+  index
+test1
+    ✓ test1
+
+
+  1 passing
+"
+`;

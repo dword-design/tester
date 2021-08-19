@@ -148,4 +148,18 @@ export default {
       )
     `,
   },
+  'transform with name': {
+    tests: endent`
+      import self from '../src'
+
+      export default self(
+        {
+          test1: {},
+        },
+        [
+          { transform: (test, name) => () => console.log(name) },
+        ],
+      )
+    `,
+  },
 } |> mapValues(runTest)

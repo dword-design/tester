@@ -53,7 +53,8 @@ export default (tests, plugins) => {
     },
     ...(tests
       |> mapValues(
-        test => plugins |> reduce((acc, plugin) => plugin.transform(acc), test)
+        (test, name) =>
+          plugins |> reduce((acc, plugin) => plugin.transform(acc, name), test)
       )),
   }
 }
