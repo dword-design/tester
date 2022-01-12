@@ -1,3 +1,10 @@
+## [2.0.11](https://github.com/dword-design/tester/compare/v2.0.10...v2.0.11) (2022-01-12)
+
+
+### Bug Fixes
+
+* update config files ([4a6f6f6](https://github.com/dword-design/tester/commit/4a6f6f66a236a501ffaa8f8e01b6d96799b378ac))
+
 ## [2.0.10](https://github.com/dword-design/tester/compare/v2.0.9...v2.0.10) (2022-01-04)
 
 
