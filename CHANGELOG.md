@@ -1,3 +1,10 @@
+## [2.0.12](https://github.com/dword-design/tester/compare/v2.0.11...v2.0.12) (2023-01-07)
+
+
+### Bug Fixes
+
+* foo ([fbdfd21](https://github.com/dword-design/tester/commit/fbdfd2147736990f05ece61cf7bdd09f7b7d5e95))
+
 ## [2.0.11](https://github.com/dword-design/tester/compare/v2.0.10...v2.0.11) (2022-01-12)
 
 
