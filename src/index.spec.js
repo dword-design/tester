@@ -1,16 +1,22 @@
 import { endent, mapValues } from '@dword-design/functions'
 import packageName from 'depcheck-package-name'
-import execa from 'execa'
-import { outputFile } from 'fs-extra'
+import { execaCommand } from 'execa'
+import outputFiles from 'output-files'
 import unifyMochaOutput from 'unify-mocha-output'
 import withLocalTmpDir from 'with-local-tmp-dir'
 
 const runTest = config =>
   function () {
     return withLocalTmpDir(async () => {
-      await outputFile('index.spec.js', config.tests)
+      await outputFiles({
+        '.babelrc.json': JSON.stringify({
+          extends: '@dword-design/babel-config',
+        }),
+        'index.spec.js': config.tests,
+        'package.json': JSON.stringify({ type: 'module' }),
+      })
 
-      const output = await execa.command(
+      const output = await execaCommand(
         `mocha --ui ${packageName`mocha-ui-exports-auto-describe`} index.spec.js`,
         { all: true }
       )
@@ -21,7 +27,7 @@ const runTest = config =>
 export default {
   'after hook': {
     tests: endent`
-      import self from '../src'
+      import self from '../src/index.js'
 
       export default self(
         {
@@ -36,7 +42,7 @@ export default {
   },
   'afterEach hook': {
     tests: endent`
-      import self from '../src'
+      import self from '../src/index.js'
 
       export default self(
         {
@@ -51,7 +57,7 @@ export default {
   },
   'before hook': {
     tests: endent`
-      import self from '../src'
+      import self from '../src/index.js'
 
       let counter = 1
 
@@ -75,7 +81,7 @@ export default {
   },
   'beforeEach hook': {
     tests: endent`
-      import self from '../src'
+      import self from '../src/index.js'
 
       let counter = 1
 
@@ -100,14 +106,14 @@ export default {
   },
   empty: {
     tests: endent`
-      import self from '../src'
+      import self from '../src/index.js'
 
       export default self({ works: () => {} })
     `,
   },
   'multiple plugins': {
     tests: endent`
-      import self from '../src'
+      import self from '../src/index.js'
 
       let counter = 1
 
@@ -130,7 +136,7 @@ export default {
   },
   transform: {
     tests: endent`
-      import self from '../src'
+      import self from '../src/index.js'
 
       export default self(
         {
@@ -150,7 +156,7 @@ export default {
   },
   'transform with name': {
     tests: endent`
-      import self from '../src'
+      import self from '../src/index.js'
 
       export default self(
         {

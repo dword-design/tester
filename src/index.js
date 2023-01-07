@@ -1,19 +1,12 @@
-import {
-  identity,
-  map,
-  mapValues,
-  reduce,
-  reverse,
-} from '@dword-design/functions'
-import sequential from 'promise-sequential'
+import { identity, reverse } from '@dword-design/functions'
 
 export default (tests, plugins) => {
-  plugins =
-    plugins
-    |> map(plugin =>
+  plugins = plugins || []
+  plugins = plugins
+    .map(plugin =>
       typeof plugin === 'string' ? require(`./${plugin}`) : plugin
     )
-    |> map(plugin => ({
+    .map(plugin => ({
       after: () => {},
       afterEach: () => {},
       before: () => {},
@@ -23,38 +16,37 @@ export default (tests, plugins) => {
     }))
 
   return {
-    after() {
-      return (
-        plugins
-        |> reverse
-        |> map(plugin => () => plugin.after.call(this))
-        |> sequential
-      )
+    async after() {
+      for (const plugin of reverse(plugins)) {
+        await plugin.after.call(this)
+      }
     },
-    afterEach() {
-      return (
-        plugins
-        |> reverse
-        |> map(plugin => () => plugin.afterEach.call(this))
-        |> sequential
-      )
+    async afterEach() {
+      for (const plugin of reverse(plugins)) {
+        await plugin.afterEach.call(this)
+      }
     },
-    before() {
-      return (
-        plugins |> map(plugin => () => plugin.before.call(this)) |> sequential
-      )
+    async before() {
+      for (const plugin of plugins) {
+        await plugin.before.call(this)
+      }
     },
-    beforeEach() {
-      return (
-        plugins
-        |> map(plugin => () => plugin.beforeEach.call(this))
-        |> sequential
-      )
+    async beforeEach() {
+      for (const plugin of plugins) {
+        await plugin.beforeEach.call(this)
+      }
     },
-    ...(tests
-      |> mapValues(
-        (test, name) =>
-          plugins |> reduce((acc, plugin) => plugin.transform(acc, name), test)
-      )),
+    ...Object.fromEntries(
+      Object.entries(tests).map(entry => {
+        const name = entry[0]
+
+        const test = entry[1]
+
+        return [
+          name,
+          plugins.reduce((acc, plugin) => plugin.transform(acc, name), test),
+        ]
+      })
+    ),
   }
 }
