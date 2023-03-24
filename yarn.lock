@@ -1254,9 +1254,7 @@
     micromatch "^4.0.2"
 
 "@dword-design/base@^9.2.0":
-  version "9.2.3"
-  resolved "https://registry.yarnpkg.com/@dword-design/base/-/base-9.2.3.tgz#140238b38c97c603071482705e7bf73e1642baee"
-  integrity sha512-0iqmdPLoAJFnFioP2DOB6Ua0zo7QHZZuzFU9zSicmjA0O6TczGSJF13APbXTN1/E1KCPU6+TXjmGndNyY2mSvQ==
+  version "9.4.52"
   dependencies:
     "@commitlint/cli" "^17.4.0"
     "@commitlint/config-conventional" "^17.4.0"
