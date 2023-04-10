@@ -10944,9 +10944,9 @@ unicode-property-aliases-ecmascript@^2.0.0:
   integrity sha512-6t3foTQI9qne+OZoVQB/8x8rk2k1eVy1gRXhV3oFQ5T6R1dqQ1xtin3XqSlx3+ATBkliTaR/hHyJBm+LVPNM8w==
 
 unify-mocha-output@^2.0.0:
-  version "2.0.18"
-  resolved "https://registry.yarnpkg.com/unify-mocha-output/-/unify-mocha-output-2.0.18.tgz#6a864fc7455984c7f546e74ea09299a1f2c304bc"
-  integrity sha512-5WUj5J8ZSl+/qV10Ypn/sl8lEdtDnjJcbvnQLytrImkWy2i/tkzdEq9/6pltJ2YHDBzUmHTeQjg1P5YSVFWFbQ==
+  version "2.0.21"
+  resolved "https://registry.yarnpkg.com/unify-mocha-output/-/unify-mocha-output-2.0.21.tgz#805e25b387517cc4364d67a08ce18b2490a56e89"
+  integrity sha512-ZE7H9/efFzwCN9mRPTDmDYk1yL+hJCVn+rezWJG/D5dapNhduh1jlY+CY0vcxzAxeF2RGr1NrdyQ9tnUWpi54g==
   dependencies:
     "@dword-design/functions" "^4.0.0"
 
