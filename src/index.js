@@ -4,7 +4,7 @@ export default (tests, plugins) => {
   plugins = plugins || []
   plugins = plugins
     .map(plugin =>
-      typeof plugin === 'string' ? require(`./${plugin}`) : plugin
+      typeof plugin === 'string' ? require(`./${plugin}`) : plugin,
     )
     .map(plugin => ({
       after: () => {},
@@ -46,7 +46,7 @@ export default (tests, plugins) => {
           name,
           plugins.reduce((acc, plugin) => plugin.transform(acc, name), test),
         ]
-      })
+      }),
     ),
   }
 }

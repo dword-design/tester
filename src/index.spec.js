@@ -18,7 +18,7 @@ const runTest = config =>
 
       const output = await execaCommand(
         `mocha --ui ${packageName`mocha-ui-exports-auto-describe`} index.spec.js`,
-        { all: true }
+        { all: true },
       )
       expect(output.all |> unifyMochaOutput).toMatchSnapshot(this)
     })
