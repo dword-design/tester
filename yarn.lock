@@ -1394,6 +1394,16 @@
     lodash "^4.17.15"
     tinycolor2 "^1.4.1"
 
+"@dword-design/functions@^5.0.22":
+  version "5.0.22"
+  resolved "https://registry.yarnpkg.com/@dword-design/functions/-/functions-5.0.22.tgz#15d49d65e750fd24a6de3aab7981ae28c68c49a3"
+  integrity sha512-kpptJzbNrOhDIR2ey0zRTQ+BoVuKNlSQZcmfjlOZ9fPDoy1vJCGKNRJHlOjeSYmU3KScGa/i0LGyu8fB8N07Eg==
+  dependencies:
+    "@dword-design/endent" "^1.0.0"
+    delay "^5.0.0"
+    lodash "^4.17.15"
+    tinycolor2 "^1.4.1"
+
 "@dword-design/jiti-babel-transform@^1.0.7":
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/@dword-design/jiti-babel-transform/-/jiti-babel-transform-1.0.7.tgz#b5d0969e68bf64ad647d489d7ae7be275ffb5fe0"
@@ -7088,7 +7098,7 @@ jest-worker@^27.5.1:
     merge-stream "^2.0.0"
     supports-color "^8.0.0"
 
-jiti@^1.16.0:
+jiti@^1.16.0, jiti@^1.18.2:
   version "1.18.2"
   resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.18.2.tgz#80c3ef3d486ebf2450d9335122b32d121f2a83cd"
   integrity sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg==
@@ -8118,6 +8128,15 @@ mocha-ui-exports-auto-describe@^2.0.0:
   dependencies:
     "@dword-design/functions" "^4.0.0"
     mocha "^9.0.0"
+
+mocha-ui-exports-auto-describe@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/mocha-ui-exports-auto-describe/-/mocha-ui-exports-auto-describe-3.0.0.tgz#d06d184c316ffac3c4249325088e0a0c3935427a"
+  integrity sha512-sS2UPuGMR/HCFUduIiUgBgRhbuy+xf88IGGMX+urMfN5hvoKQngZT+XiZQyjCRDy6RToxhbmSEeA055PnjXQ7Q==
+  dependencies:
+    "@dword-design/functions" "^5.0.22"
+    jiti "^1.18.2"
+    mocha "^10.2.0"
 
 mocha@^10.2.0:
   version "10.2.0"
